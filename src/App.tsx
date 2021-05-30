@@ -35,8 +35,7 @@ const options = [
 ];
 const showAccordion = () => {
   if (window.location.pathname === '/') {
-    return <Accordion />
-    // return <Accordion items={items} />;
+    return <Accordion items={items} />;
   }
 }
 
@@ -44,7 +43,8 @@ export default () => {
   return (
     <div>
       <h1>Widgets</h1>
-      {showAccordion()}
+      {/* {showAccordion()} */}
+      <Search />
       {/* <Translate /> */}
     </div>
   );
