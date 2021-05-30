@@ -21,15 +21,15 @@ const items = [
 
 const options = [
   {
-    label: 'Tomato',
+    label: 'Tomato Color',
     value: 'red',
   },
   {
-    label:'Grass',
+    label:'A Shade of Grass',
     value: 'green',
   },
   {
-    label:'Sky',
+    label:'Big Beautiful Sky',
     value: 'blue',
   },
 ];
@@ -39,12 +39,21 @@ const showAccordion = () => {
   }
 }
 
+
+
+
 export default () => {
+  const [selected, setSelected] = useState(options[0]);
   return (
     <div>
       <h1>Widgets</h1>
       {/* {showAccordion()} */}
-      <Search />
+      {/* <Search /> */}
+      <Dropdown 
+        selected={selected}
+        onSelectedChange={setSelected}
+        options={options} 
+      />
       {/* <Translate /> */}
     </div>
   );
